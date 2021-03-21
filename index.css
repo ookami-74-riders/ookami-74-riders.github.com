@@ -86,9 +86,10 @@ body .sns .sns-widgets {
 
 body .sns .sns-widgets .sns-widget {
   width: 327px;
-  padding: 12px 0 12px;
+  max-height: 487px;
+  margin: 12px 0 12px;
   border-radius: 8px;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 body .sns .sns-widgets .sns-widget > a > img {
@@ -97,7 +98,7 @@ body .sns .sns-widgets .sns-widget > a > img {
 
 @media screen and (min-width: 768px) {
   body .sns .sns-widgets .sns-widget {
-    padding: 8px;
+    margin: 8px;
   }
 }
 
@@ -141,8 +142,16 @@ body > footer span, body > footer a, body > footer p {
 
 body > footer .footer-logo {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 250px;
-          flex: 0 0 250px;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  body > footer .footer-logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 250px;
+            flex: 0 0 250px;
+  }
 }
 
 body > footer .footer-logo > img {
