@@ -4,43 +4,70 @@ body {
   background-color: #121212;
 }
 
-body > header .header-mobile {
-  width: 100%;
+body > header {
+  min-height: 638px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./image/header-mobile.png");
+}
+
+@media screen and (min-width: 552px) {
+  body > header {
+    min-height: 638px;
+    background-image: url("./image/header-tablet.png");
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body > header {
+    min-height: 730px;
+    background-image: url("./image/header-desktop.png");
+  }
+}
+
+body > header .header-title {
+  padding: 64px 24px;
+  max-width: 960px;
+  margin: auto;
+}
+
+body > header .header-title .header-title-logo {
   display: block;
+  width: 225px;
 }
 
-@media screen and (min-width: 768px) {
-  body > header .header-mobile {
-    display: none;
-  }
+body > header .header-title > p {
+  display: block;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: -0.006em;
+  color: #fff;
+  margin-top: 24px;
 }
 
-body > header .header-tablet {
-  width: 100%;
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  body > header .header-tablet {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  body > header .header-tablet {
-    display: none;
-  }
-}
-
-body > header .header-desktop {
-  width: 100%;
-  display: none;
-}
-
-@media screen and (min-width: 1024px) {
-  body > header .header-desktop {
-    display: block;
-  }
+body > header .header-title .header-title-link {
+  display: block;
+  width: 264px;
+  height: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  border: 3px solid #fff;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 120%;
+  letter-spacing: -0.012em;
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  margin-top: 24px;
 }
 
 body .sns {
